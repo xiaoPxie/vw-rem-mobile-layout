@@ -207,7 +207,8 @@
     overflow: hidden; }
   .recommend-wrap .content-wrap img {
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    animation: scale-img 4s infinite alternate; }
 @keyframes scale-img {
   0% {
     transform: scale(1, 1); }

@@ -207,7 +207,7 @@
     img {
       max-width: 100%;
       height: auto;
-      //animation: scale-img 4s infinite alternate;
+      animation: scale-img 4s infinite alternate;
     }
     @include prefix-keyframes(scale-img) {
       0% { transform: scale(1, 1)}
