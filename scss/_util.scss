@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+// 移动端页面设计稿宽度
+$design-width: 750;
+// 移动端页面设计稿dpr基准值
+$design-dpr: 2;
+// 页面根font-size基准值
+$base-font-size: 16px;
+// 缩放所支持的设备最小宽度
+//$min-device-width: 320px;
+// 缩放所支持的设备最大宽度
+$max-device-width: 540px;
+
+// html根元素的font-size定义
+@mixin root-font-size() {
+    html {
+        font-size: 12px;
+    }
+    // iPhone5/SE
+    @media screen and (min-width: 320px) {
+        html {
+            font-size: calc(13px + 2 * (100vw - 320px) / 13);
+        }
+    }
+    // 三星NOTE系列
+    @media screen and (min-width: 360px) {
+        html {
+            font-size: calc(15px + 2 * (100vw - 360px) / 25);
+        }
+    }
+    // iPhone6的375px尺寸作为16px基准
+    @media screen and (min-width: 375px) {
+        html {
+            font-size: calc(16px + 2 * (100vw - 375px) / 39);
+        }
+    }
+    // 414px-1000px每100像素宽字体增加1px(18px-22px)
+    @media screen and (min-width: 414px) {
+        html {
+            font-size: calc(18px + 4 * (100vw - 414px) / 586);
+        }
+    }
+    // 600px-1000px每100像素宽字体增加1px(20px-24px)
+    @media screen and (min-width: 600px) {
+        html {
+            font-size: calc(20px + 4 * (100vw - 600px) / 400);
+        }
+    }
+    // 1000px往后是每100像素0.5px增加
+    @media screen and (min-width: 1000px) {
+        html {
+            font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
+        }
+    }
+}
+
+// 单位px转化为rem
+@function px2rem($px) {
+    @return #{$px / $design-dpr / $base-font-size}rem;
+}

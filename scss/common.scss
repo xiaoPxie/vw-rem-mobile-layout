@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@import "./util";
+@import "./flex-util";
+
+//设置根font-size值
+@include root-font-size;
+
+html {
+  background-color: #fff;
+  font-family: "Microsoft YaHei", serif;
+}
+
+.common-header {
+  @include display-flex;
+  @include justify-content_space-between;
+  //@include align-items_center;
+  position: relative;
+  height: px2rem(78px);
+  background-color: #eee;
+
+  & > .wrap-l {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: px2rem(148px);
+    height: px2rem(37px);
+    margin-left: px2rem(31px);
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  & > .wrap-r {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-right: px2rem(31px);
+    font-size: px2rem(26.38px);
+    color: #666;
+    .people-icon {
+      width: px2rem(29px);
+      height: px2rem(24px);
+    }
+    .people-num {
+      color: #58afe8;
+    }
+  }
+}
+
+.common-tap {
+  @include display-flex;
+  @include align-items_center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: px2rem(102px);
+  background: #f9f9f9;
+
+  & > .icon {
+    @include display-flex;
+    @include justify-content_center;
+    @include align-items_center;
+    width: 33.33%;
+    height: inherit;
+    font-size: 0;
+  }
+  & .icon-phone {
+    display: inline-block;
+    width: px2rem(47px);
+    height: px2rem(46px);
+    background: url("../image/@3x/tap_phone_l@3x.png") no-repeat;
+    background-size: contain;
+
+    &.active {
+      background: url("../image/@3x/tap_phone_r@3x.png") no-repeat;
+      background-size: contain;
+    }
+  }
+  & .icon-i {
+    display: inline-block;
+    width: px2rem(40px);
+    height: px2rem(46px);
+    background: url("../image/@3x/tap_i_l@3x.png") no-repeat;
+    background-size: contain;
+
+    &.active {
+      background: url("../image/@3x/tap_i_r@3x.png") no-repeat;
+      background-size: contain;
+    }
+  }
+  & .icon-person {
+    display: inline-block;
+    width: px2rem(47px);
+    height: px2rem(46px);
+    background: url("../image/@3x/tap_person_l@3x.png") no-repeat;
+    background-size: contain;
+
+    &.active {
+      background: url("../image/@3x/tap_person_r@3x.png") no-repeat;
+      background-size: contain;
+    }
+  }
+}

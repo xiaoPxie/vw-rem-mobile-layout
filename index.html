@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vw-rem-layout</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="viewport" data-content-max content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- 设置页面tab颜色 -->
+    <meta name="theme-color" content="#5dcbc1">
+    <!-- WebApp全屏模式：伪装app，离线应用。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 告诉搜索引擎此页面类型是移动端 <pc | mobile | pc,mobile> -->
+    <meta name="applicable-device" content = "mobile">
+    <!-- 网页图标 -->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="./image/@3x/favicon.ico?v=201911141135"/>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./dist/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .swiper-container-horizontal>.swiper-pagination-bullets {
+            width: initial;
+            left: initial;
+            right: 38px;
+        }
+
+    </style>
+</head>
+<body>
+<header class="common-header">
+    <a class="wrap-l" href="javascript:void(0)">
+        <img src="./image/@3x/header_logo@3x.png" alt="千图网">
+    </a>
+    <div class="wrap-r">
+        <img class="people-icon" src="./image/@3x/header_visitors_num@3x.png" alt="">
+        <span>访问人数：<span class="people-num">29919</span></span>
+    </div>
+</header>
+<section class="banner">
+    <div class="banner-wrap swiper-container">
+        <div class="swiper-wrapper">
+            <hgroup class="swiper-slide">
+                <h2>千图网</h2>
+                <h1>上xxAPP更优惠</h1>
+                <h3>xxxx  xxxxxxx</h3>
+            </hgroup>
+            <hgroup class="swiper-slide">
+                <h2>UI网</h2>
+                <h1>text文本text文本text</h1>
+                <h3>联系电话：020-xxxx xxxxxx</h3>
+            </hgroup>
+            <hgroup class="swiper-slide">
+                <h2>NJK网</h2>
+                <h1>h1文案文案文案文案文案文</h1>
+                <h3>h3文案h3文案h3文案h3文案</h3>
+            </hgroup>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<nav class="nav-wrap">
+    <div class="nav-list nav-swiper-container">
+        <div class="swiper-wrapper">
+            <a class="nav-item swiper-slide" href="javascript:void(0)">
+                <p class="icon icon-oil">
+                    <img class="img-oil" src="./image/@3x/nav_oil@3x.png" alt="加油">
+                </p>
+                <span>加油</span>
+            </a>
+            <a class="nav-item swiper-slide" href="javascript:void(0)">
+                <p class="icon icon-member">
+                    <img class="img-member" src="./image/@3x/nav_member@3x.png" alt="会员">
+                </p>
+                <span>会员</span>
+            </a>
+            <a class="nav-item swiper-slide" href="javascript:void(0)">
+                <p class="icon icon-jd">
+                    <img class="img-jd" src="./image/@3x/nav_jd@3x.png" alt="上京东">
+                </p>
+                <span>上京东</span>
+            </a>
+            <a class="nav-item swiper-slide" href="javascript:void(0)">
+                <p class="icon icon-taobao">
+                    <img class="img-taobao" src="./image/@3x/nav_taobao@3x.png" alt="逛淘宝">
+                </p>
+                <span>逛淘宝</span>
+            </a>
+            <a class="nav-item swiper-slide" href="javascript:void(0)">
+                <p class="icon icon-jd">
+                    <img class="img-jd" src="./image/@3x/nav_jd@3x.png" alt="上京东">
+                </p>
+                <span>上京东</span>
+            </a>
+            <a class="nav-item swiper-slide" href="javascript:void(0)">
+                <p class="icon icon-taobao">
+                    <img class="img-taobao" src="./image/@3x/nav_taobao@3x.png" alt="逛淘宝">
+                </p>
+                <span>逛淘宝</span>
+            </a>
+            <a class="nav-item swiper-slide" href="javascript:void(0)">
+                <p class="icon icon-member">
+                    <img class="img-member" src="./image/@3x/nav_member@3x.png" alt="会员">
+                </p>
+                <span>会员</span>
+            </a>
+            <a class="nav-item swiper-slide" href="javascript:void(0)">
+                <p class="icon icon-jd">
+                    <img class="img-jd" src="./image/@3x/nav_jd@3x.png" alt="上京东">
+                </p>
+                <span>上京东</span>
+            </a>
+        </div>
+    </div>
+</nav>
+<section class="notice-wrap">
+    <img class="img-notice" src="./image/@3x/notice@3x.png" alt="公告icon">
+    <!-- Swiper -->
+    <div class="notice-text">
+        <div class="notice-swiper-container">
+            <div class="swiper-wrapper">
+                <p class="swiper-slide">这儿是宣传公告1</p>
+                <p class="swiper-slide">这儿是宣传公告2</p>
+                <p class="swiper-slide">这儿是宣传公告3</p>
+            </div>
+        </div>
+    </div>
+<!--    <p class="notice-text">这儿是宣传公告</p>-->
+    <a class="notice-btn" href="javascript:void(0)">
+        <span class="btn-text">立即查看</span>
+    </a>
+        <img class="btn-icon" src="./image/@3x/notice_arrow@3x.png" alt="立即查看">
+
+</section>
+<div class="seperate-line"></div>
+<section class="recommend-wrap">
+    <div class="title-panel">
+        <h3>为您推荐</h3>
+        <p>分享多多  优惠多多</p>
+    </div>
+    <div class="content-wrap">
+        <div class="wrap-l">
+            <a href="javascript:void(0)">
+                <h3 class="title">
+                    <span class="title-detail">XX</span>兑换
+                </h3>
+                <img src="./image/@3x/recommend_exchange@3x.png" alt="xx兑换">
+            </a>
+        </div>
+        <div class="wrap-r">
+            <a class="r top" href="javascript:void(0)">
+                <h3>定位附近</h3>
+                <img src="./image/@3x/recommend_location@3x.png" alt="定位附近">
+            </a>
+            <a class="r bottom" href="javascript:void(0)">
+                <h3>今日价格</h3>
+                <img src="./image/@3x/recommend_today_price@3x.png" alt="今日价格">
+            </a>
+        </div>
+    </div>
+</section>
+<footer class="common-tap">
+    <a class="icon" href="javascript:void(0)">
+        <span class="icon-phone"></span>
+    </a>
+    <a class="icon" href="javascript:void(0)">
+        <span class="icon-i active"></span>
+    </a>
+    <a class="icon" href="javascript:void(0)">
+        <span class="icon-person"></span>
+    </a>
+</footer>
+
+<script src="./dist/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        speed: 500,
+        loop : true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        bulletClass : 'banner-bullet',//需设置.my-bullet样式
+    });
+    var swiper2 = new Swiper('.nav-swiper-container', {
+        slidesPerView: "auto",
+        freeMode: true,
+    });
+    var swiper3 = new Swiper('.notice-swiper-container', {
+        direction : 'vertical',
+        speed: 500,
+        loop : true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+</body>
+</html>
