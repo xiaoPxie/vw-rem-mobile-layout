@@ -29,3 +29,22 @@
   }
 }
 
+@mixin prefix($style-name, $value, $options: webkit moz o ms) {
+  #{$style-name}: $value;
+
+  @each $option in $options {
+    @if $option == webkit {
+      -webkit-#{$style-name}: #{$value};
+    }
+    @else if $option == moz {
+      -moz-#{$style-name}: #{$value};
+    }
+    @else if $option == o {
+      -o-#{$style-name}: #{$value};
+    }
+    @else if $option == ms {
+      -ms-#{$style-name}: #{$value};
+    }
+  }
+}
+

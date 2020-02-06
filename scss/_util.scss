@@ -34,24 +34,24 @@ $max-device-width: 540px;
             font-size: calc(16px + 2 * (100vw - 375px) / 39);
         }
     }
-    // 414px-1000px每100像素宽字体增加1px(18px-22px)
-    @media screen and (min-width: 414px) {
-        html {
-            font-size: calc(18px + 4 * (100vw - 414px) / 586);
-        }
-    }
-    // 600px-1000px每100像素宽字体增加1px(20px-24px)
-    @media screen and (min-width: 600px) {
-        html {
-            font-size: calc(20px + 4 * (100vw - 600px) / 400);
-        }
-    }
-    // 1000px往后是每100像素0.5px增加
-    @media screen and (min-width: 1000px) {
-        html {
-            font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
-        }
-    }
+    //// 414px-1000px每100像素宽字体增加1px(18px-22px)
+    //@media screen and (min-width: 414px) {
+    //    html {
+    //        font-size: calc(18px + 4 * (100vw - 414px) / 586);
+    //    }
+    //}
+    //// 600px-1000px每100像素宽字体增加1px(20px-24px)
+    //@media screen and (min-width: 600px) {
+    //    html {
+    //        font-size: calc(20px + 4 * (100vw - 600px) / 400);
+    //    }
+    //}
+    //// 1000px往后是每100像素0.5px增加
+    //@media screen and (min-width: 1000px) {
+    //    html {
+    //        font-size: calc(22px + 6 * (100vw - 1000px) / 1000);
+    //    }
+    //}
 }
 
 // 单位px转化为rem

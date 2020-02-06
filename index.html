@@ -182,18 +182,44 @@
         </div>
     </div>
 </section>
+
 <footer class="common-tap">
-    <a class="icon" href="javascript:void(0)">
+    <a class="icon" id="tap-phone" href="javascript:void(0)">
         <span class="icon-phone"></span>
     </a>
-    <a class="icon" href="javascript:void(0)">
+    <a class="icon" id="tap-i" href="javascript:void(0)">
         <span class="icon-i active"></span>
     </a>
-    <a class="icon" href="javascript:void(0)">
+    <a class="icon" id="tap-person" href="javascript:void(0)">
         <span class="icon-person"></span>
     </a>
 </footer>
 
+<div class="modal" id="my-modal"></div>
+
+<div class="my-panel" id="my-panel">
+    <div class="wrap wrap-t">
+        <img src="./image/@3x/noface.gif" alt="">
+    </div>
+    <div class="wrap wrap-c">
+        <div class="side-list">
+            <a class="side-item" href="javascript:void(0)">
+                <img src="./image/@3x/ia_100000005.png" alt="会员中心">
+                <span>会员中心</span>
+            </a>
+            <a class="side-item" href="javascript:void(0)">
+                <img src="./image/@3x/ia_100000007.png" alt="我的轨迹">
+                <span>我的轨迹</span>
+            </a>
+        </div>
+    </div>
+    <div class="wrap wrap-b">
+        <a href="javascript:void(0)">服务协议</a>
+        <a href="javascript:void(0)">隐私政策</a>
+    </div>
+</div>
+
+<script src="./dist/js/jquery-3.2.1.min.js"></script>
 <script src="./dist/js/swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
@@ -221,6 +247,27 @@
             disableOnInteraction: false,
         },
     });
+
+    $(function(){
+        $(".common-tap").on('touchstart', '.icon', function(ev){
+            $(ev.target).addClass('active');
+            $(ev.target).find('span').addClass('active');
+            $(ev.target).parent().siblings().find('span').removeClass('active');
+            $(ev.target).siblings().find('span').removeClass('active');
+        })
+        $(".common-tap").on('touchend', '.icon', function(ev){
+
+
+        })
+        $("#tap-person").on('touchstart',function(){
+            $("#my-modal").fadeIn(300);
+            $("#my-panel").css("left", "0");
+        })
+        $("#my-modal").on('touchstart',function(){
+            $("#my-modal").fadeOut(300);
+            $("#my-panel").css("left", "-100%");
+        })
+    })
 </script>
 </body>
 </html>

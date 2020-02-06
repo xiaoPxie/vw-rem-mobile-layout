@@ -60,6 +60,7 @@ html {
   width: 100%;
   height: px2rem(102px);
   background: #f9f9f9;
+  z-index: 10;
 
   & > .icon {
     @include display-flex;

@@ -14,15 +14,6 @@ html {
 @media screen and (min-width: 375px) {
   html {
     font-size: calc(16px + 2 * (100vw - 375px) / 39); } }
-@media screen and (min-width: 414px) {
-  html {
-    font-size: calc(18px + 4 * (100vw - 414px) / 586); } }
-@media screen and (min-width: 600px) {
-  html {
-    font-size: calc(20px + 4 * (100vw - 600px) / 400); } }
-@media screen and (min-width: 1000px) {
-  html {
-    font-size: calc(22px + 6 * (100vw - 1000px) / 1000); } }
 html {
   background-color: #fff;
   font-family: "Microsoft YaHei", serif; }
@@ -94,7 +85,8 @@ html {
   bottom: 0;
   width: 100%;
   height: 3.1875rem;
-  background: #f9f9f9; }
+  background: #f9f9f9;
+  z-index: 10; }
   .common-tap > .icon {
     display: -webkit-box;
     /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */

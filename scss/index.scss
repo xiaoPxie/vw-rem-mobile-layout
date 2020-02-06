@@ -2,7 +2,8 @@
 
 @import "./util";
 @import "./flex-util";
-@import "./animate";
+@import "./prefix";
+@import "./border";
 
 .banner {
   height: px2rem(222px);
@@ -244,6 +245,7 @@
         position: relative;
         //height: px2rem(156px);
         font-size: px2rem(26.38px);
+
         &:link {
           color: #222;
         }
@@ -257,6 +259,97 @@
           z-index: 2;
         }
       }
+    }
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  //@include prefix(transition, left 0.5s);
+}
+
+.my-panel {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  z-index: 200;
+  @include prefix(transition, left 0.5s);
+
+  & > .wrap-t {
+    @include display-flex;
+    @include justify-content_center;
+    @include align-items_center;
+    width: 100%;
+    height: px2rem(206px);
+    background: #fafafb;
+
+      img {
+        width: px2rem(156px);
+        height: px2rem(156px);
+        border-radius: 50%;
+      }
+
+  }
+
+  & > .wrap-c {
+    position: relative;
+    padding: px2rem(30px);
+    font-size: px2rem(34px);
+
+    .side-list {
+
+      & > .side-item {
+        display: block;
+        width: 100%;
+        height: px2rem(108px);
+        line-height: px2rem(108px);
+
+        &:link {
+          color: #212732;
+        }
+        &:hover {
+          color: #212732;
+        }
+
+        img {
+          display: inline-block;
+          vertical-align: middle;
+          width: px2rem(40px);
+          height: auto;
+          margin: px2rem(10px);
+        }
+
+      }
+    }
+  }
+
+  & > .wrap-b {
+    @include display-flex;
+    @include align-items_center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: px2rem(88px);
+    line-height: px2rem(88px);
+    background: #fafafb;
+
+    & > a {
+      display: inline-block;
+      height: 100%;
+      padding: px2rem(10px);
+      margin: 0 px2rem(30px);
+      font-size: px2rem(24px);
+      color: #8f949f;
     }
   }
 }

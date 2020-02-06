@@ -3,6 +3,7 @@
   display:flex兼容性存在多方的问题，针对该问题，编写以下的@mixin，可能不够完整
  */
 /* 添加动画前缀 */
+/* 添加动画前缀 */
 .banner {
   height: 6.9375rem;
   padding: 2.84375rem 0 0 1.3125rem;
@@ -266,5 +267,106 @@
         top: 1.40625rem;
         left: 0.625rem;
         z-index: 2; }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100; }
+
+.my-panel {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  z-index: 200;
+  transition: left 0.5s;
+  -webkit-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  -o-transition: left 0.5s;
+  -ms-transition: left 0.5s; }
+  .my-panel > .wrap-t {
+    display: -webkit-box;
+    /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -moz-box;
+    /* Firefox 17- */
+    display: -webkit-flex;
+    /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -moz-flex;
+    /* Firefox 18+ */
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: flex;
+    /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+    height: 6.4375rem;
+    background: #fafafb; }
+    .my-panel > .wrap-t img {
+      width: 4.875rem;
+      height: 4.875rem;
+      border-radius: 50%; }
+  .my-panel > .wrap-c {
+    position: relative;
+    padding: 0.9375rem;
+    font-size: 1.0625rem; }
+    .my-panel > .wrap-c .side-list > .side-item {
+      display: block;
+      width: 100%;
+      height: 3.375rem;
+      line-height: 3.375rem; }
+      .my-panel > .wrap-c .side-list > .side-item:link {
+        color: #212732; }
+      .my-panel > .wrap-c .side-list > .side-item:hover {
+        color: #212732; }
+      .my-panel > .wrap-c .side-list > .side-item img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.25rem;
+        height: auto;
+        margin: 0.3125rem; }
+  .my-panel > .wrap-b {
+    display: -webkit-box;
+    /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+    display: -moz-box;
+    /* Firefox 17- */
+    display: -webkit-flex;
+    /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+    display: -moz-flex;
+    /* Firefox 18+ */
+    display: -ms-flexbox;
+    /* IE 10 */
+    display: flex;
+    /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    background: #fafafb; }
+    .my-panel > .wrap-b > a {
+      display: inline-block;
+      height: 100%;
+      padding: 0.3125rem;
+      margin: 0 0.9375rem;
+      font-size: 0.75rem;
+      color: #8f949f; }
 
 /*# sourceMappingURL=index.css.map */
